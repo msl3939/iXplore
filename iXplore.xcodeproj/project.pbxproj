@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		360E4ED71D33C1D9006947E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E4ED61D33C1D9006947E1 /* AppDelegate.swift */; };
-		360E4ED91D33C1D9006947E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E4ED81D33C1D9006947E1 /* ViewController.swift */; };
-		360E4EDC1D33C1D9006947E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360E4EDA1D33C1D9006947E1 /* Main.storyboard */; };
 		360E4EDE1D33C1D9006947E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360E4EDD1D33C1D9006947E1 /* Assets.xcassets */; };
 		360E4EE11D33C1D9006947E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360E4EDF1D33C1D9006947E1 /* LaunchScreen.storyboard */; };
 		360E4EEC1D33C1D9006947E1 /* iXploreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E4EEB1D33C1D9006947E1 /* iXploreTests.swift */; };
 		360E4EF71D33C1D9006947E1 /* iXploreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E4EF61D33C1D9006947E1 /* iXploreUITests.swift */; };
+		360E4F0A1D33C41B006947E1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E4F081D33C41B006947E1 /* MapViewController.swift */; };
+		360E4F0B1D33C41B006947E1 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360E4F091D33C41B006947E1 /* MapViewController.xib */; };
+		360E4F0D1D33C68C006947E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360E4F0C1D33C68C006947E1 /* MapKit.framework */; };
+		36A088D21D344AB200E39127 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A088D11D344AB200E39127 /* Entry.swift */; };
+		36A088D51D344C7100E39127 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A088D41D344C7100E39127 /* EntryController.swift */; };
+		36A089221D351AE800E39127 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A089201D351AE800E39127 /* NewEntryViewController.swift */; };
+		36A089231D351AE800E39127 /* NewEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A089211D351AE800E39127 /* NewEntryViewController.xib */; };
+		36A089D71D36DEB400E39127 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A089D61D36DEB400E39127 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +42,6 @@
 /* Begin PBXFileReference section */
 		360E4ED31D33C1D9006947E1 /* iXplore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iXplore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		360E4ED61D33C1D9006947E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		360E4ED81D33C1D9006947E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		360E4EDB1D33C1D9006947E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		360E4EDD1D33C1D9006947E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		360E4EE01D33C1D9006947E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		360E4EE21D33C1D9006947E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		360E4EF21D33C1D9006947E1 /* iXploreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iXploreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		360E4EF61D33C1D9006947E1 /* iXploreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iXploreUITests.swift; sourceTree = "<group>"; };
 		360E4EF81D33C1D9006947E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		360E4F081D33C41B006947E1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		360E4F091D33C41B006947E1 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		360E4F0C1D33C68C006947E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		36A088D11D344AB200E39127 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		36A088D41D344C7100E39127 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		36A089201D351AE800E39127 /* NewEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
+		36A089211D351AE800E39127 /* NewEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewEntryViewController.xib; sourceTree = "<group>"; };
+		36A089D61D36DEB400E39127 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A089D71D36DEB400E39127 /* CoreLocation.framework in Frameworks */,
+				360E4F0D1D33C68C006947E1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +91,8 @@
 		360E4ECA1D33C1D9006947E1 = {
 			isa = PBXGroup;
 			children = (
+				36A089D61D36DEB400E39127 /* CoreLocation.framework */,
+				360E4F0C1D33C68C006947E1 /* MapKit.framework */,
 				360E4ED51D33C1D9006947E1 /* iXplore */,
 				360E4EEA1D33C1D9006947E1 /* iXploreTests */,
 				360E4EF51D33C1D9006947E1 /* iXploreUITests */,
@@ -98,11 +114,12 @@
 			isa = PBXGroup;
 			children = (
 				360E4ED61D33C1D9006947E1 /* AppDelegate.swift */,
-				360E4ED81D33C1D9006947E1 /* ViewController.swift */,
-				360E4EDA1D33C1D9006947E1 /* Main.storyboard */,
 				360E4EDD1D33C1D9006947E1 /* Assets.xcassets */,
 				360E4EDF1D33C1D9006947E1 /* LaunchScreen.storyboard */,
 				360E4EE21D33C1D9006947E1 /* Info.plist */,
+				36A0891F1D351A1900E39127 /* Model Controllers */,
+				36A0891E1D3519FB00E39127 /* View Controllers */,
+				36A088D31D344AE300E39127 /* Model */,
 			);
 			path = iXplore;
 			sourceTree = "<group>";
@@ -123,6 +140,33 @@
 				360E4EF81D33C1D9006947E1 /* Info.plist */,
 			);
 			path = iXploreUITests;
+			sourceTree = "<group>";
+		};
+		36A088D31D344AE300E39127 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36A088D11D344AB200E39127 /* Entry.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		36A0891E1D3519FB00E39127 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				360E4F091D33C41B006947E1 /* MapViewController.xib */,
+				36A089211D351AE800E39127 /* NewEntryViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		36A0891F1D351A1900E39127 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36A088D41D344C7100E39127 /* EntryController.swift */,
+				360E4F081D33C41B006947E1 /* MapViewController.swift */,
+				36A089201D351AE800E39127 /* NewEntryViewController.swift */,
+			);
+			name = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				360E4EE11D33C1D9006947E1 /* LaunchScreen.storyboard in Resources */,
+				360E4F0B1D33C41B006947E1 /* MapViewController.xib in Resources */,
+				36A089231D351AE800E39127 /* NewEntryViewController.xib in Resources */,
 				360E4EDE1D33C1D9006947E1 /* Assets.xcassets in Resources */,
-				360E4EDC1D33C1D9006947E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				360E4ED91D33C1D9006947E1 /* ViewController.swift in Sources */,
+				36A089221D351AE800E39127 /* NewEntryViewController.swift in Sources */,
+				36A088D21D344AB200E39127 /* Entry.swift in Sources */,
 				360E4ED71D33C1D9006947E1 /* AppDelegate.swift in Sources */,
+				36A088D51D344C7100E39127 /* EntryController.swift in Sources */,
+				360E4F0A1D33C41B006947E1 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +341,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		360E4EDA1D33C1D9006947E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				360E4EDB1D33C1D9006947E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		360E4EDF1D33C1D9006947E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -482,6 +522,7 @@
 				360E4EFD1D33C1D9006947E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		360E4EFE1D33C1D9006947E1 /* Build configuration list for PBXNativeTarget "iXploreTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +531,7 @@
 				360E4F001D33C1D9006947E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		360E4F011D33C1D9006947E1 /* Build configuration list for PBXNativeTarget "iXploreUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +540,7 @@
 				360E4F031D33C1D9006947E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

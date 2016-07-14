@@ -8,12 +8,15 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    let locationManager = CLLocationManager()
     
     func newEntryButtonPressed(sender:UIBarButtonItem) {
         let viewcontroller = NewEntryViewController (nibName: "NewEntryViewController", bundle: nil)
@@ -24,13 +27,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
         super.viewDidLoad()
         
         // Add values to entry
-//        EntryController.sharedInstance.spotList()
+        EntryController.sharedInstance.getEntries()
 
         // Do any additional setup after loading the view.
         navigationItem.title = "iXplore"
         
         let addButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(self.newEntryButtonPressed(_:)))
+        //let cLButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: #selector(self.findMeButton(_:)))
+        
         navigationItem.rightBarButtonItem = addButton
+        //navigationItem.leftBarButtonItem = cLButton
         
         // Set delegate
         tableView.delegate = self
@@ -45,17 +51,25 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
         //Add pins
         mapView.addAnnotations(EntryController.sharedInstance.entries)
         
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+
+
     }
 
     override func viewDidAppear(animated: Bool) {
-        mapView.addAnnotations(EntryController.sharedInstance.entries)
+        mapView.addAnnotations(EntryController.sharedInstance.getEntries())
         tableView.reloadData()
+        
     }
     
     //Change pins & add callouts
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "myPin"
         var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView
+        if (annotation.isKindOfClass(MKUserLocation)){
+            return nil
+        }
         
         if (annotationView == nil){
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
@@ -106,7 +120,32 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
         mapView.selectAnnotation(EntryController.sharedInstance.entries[indexPath.row], animated: true)
     }
     
-
+  /*  func findMeButton(sender: UIButton) {
+        //Current location
+        locationManager.requestWhenInUseAuthorization()
+        
+        switch CLLocationManager.authorizationStatus() {
+        case .AuthorizedWhenInUse, .AuthorizedAlways:
+            locationManager.startUpdatingLocation()
+            
+        case .NotDetermined:
+            locationManager.requestAlwaysAuthorization()
+            
+        case .Restricted, .Denied:
+            
+            let alertController = UIAlertController(
+                title: "I'm Sad :(",
+                message: "I hate my life",
+                preferredStyle: .Alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }*/
+    
     
     /*
     // MARK: - Navigation

@@ -39,13 +39,6 @@ class Entry: NSObject, MKAnnotation, NSCoding {
         coder.encodeObject(notes, forKey: "notes")
     }
  
-    func returnURL() -> NSURL {
-        let manager = NSFileManager.defaultManager()
-        let documents = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask) [0]
-        let fileURL: NSURL = documents.URLByAppendingPathComponent("file.txt") //<--- this is a url
-        return fileURL
-    }
-    
 }
 
 

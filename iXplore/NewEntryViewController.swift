@@ -42,6 +42,12 @@ class NewEntryViewController: UIViewController {
         EntryController.sharedInstance.entries.append(newEntry)
         
         navigationController?.popViewControllerAnimated(true)
+        
+        var fileURL = EntryController.sharedInstance.returnURL()
+        
+        NSKeyedArchiver.archiveRootObject(EntryController.sharedInstance.entries, toFile: fileURL.path!)
+        
+        
     }
     
     

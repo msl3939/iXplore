@@ -14,6 +14,22 @@ class EntryController: NSObject {
     
     var entries:[Entry] = []
     
+    func returnURL() -> NSURL {
+        let manager = NSFileManager.defaultManager()
+        let documents = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask) [0]
+        let fileURL: NSURL = documents.URLByAppendingPathComponent("file.txt") //<--- this is a url
+        return fileURL
+    }
+    
+    func getEntries() -> [Entry] {
+        if let entry =
+            NSKeyedUnarchiver.unarchiveObjectWithFile(returnURL().path!) as? [Entry] {
+                entries = entry
+            }
+        return entries
+    }
+    
+    
     /* func spotList() {
         
         let spot = Entry(title: "spot1", coordinate: CLLocationCoordinate2D(latitude: -33.906764,longitude: 18.4164983), date: NSDate(), notes: "1")
